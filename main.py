@@ -34,7 +34,7 @@ For EVERY individual news article selected, display it clearly with source, summ
 RAW DATA:
 {raw_input}
 """
-                model = genai.GenerativeModel('gemini-1.5-flash')
+               model = genai.GenerativeModel('gemini-1.5-pro')
                 response = model.generate_content(prompt)
                 
                 st.subheader("📋 بولتن خروجی:")
