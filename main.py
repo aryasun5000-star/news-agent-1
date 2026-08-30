@@ -26,7 +26,7 @@ if st.button("تولید بولتن خبری"):
         with st.spinner("در حال پردازش و خلاصه‌سازی با جمینای..."):
             try:
                 prompt = f"""
-You are an executive media monitoring specialist. Process the raw news below into a structured news bulletin.
+You are an executive media monitoring specialist. Process the raw news below into a structured news bulletin in Persian.
 
 STRICT ENTRY STRUCTURE REQUIREMENT:
 For EVERY individual news article selected, display it clearly with source, summary, and context.
@@ -34,7 +34,7 @@ For EVERY individual news article selected, display it clearly with source, summ
 RAW DATA:
 {raw_input}
 """
-               model = genai.GenerativeModel('gemini-1.5-pro')
+                model = genai.GenerativeModel('gemini-2.5-flash')
                 response = model.generate_content(prompt)
                 
                 st.subheader("📋 بولتن خروجی:")
